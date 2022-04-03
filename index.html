@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amatic+SC&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Weather Dashboard</title>
+
+  </head>
+
+  <body>
+    </div>
+    <header>
+    <div class="jumbotron">
+        <img src="./assets/imgs/suncloud.png" alt="Sun" class="sunCloudImg">
+      <h1 class="mheader">Weather Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <h2>Search:</h2>
+        <input class="cityForm form-control-sm" type="text" placeholder="City...">
+        <br>
+        <button type="button" class="cityBtn btn-secondary btn-sm">Search!</button>
+        <ul class="historyUl"> History:
+          
+        </ul>
+    </div>
+
+    <div class="containerInner">
+        <div class="detRow">
+            <div class="col-12">
+                <h4 class='cityHeader'>City: </h4>
+                <p class='tempData'>Temp: </p>
+                <p class='windData'>Wind: </p>
+                <p class='humData'>Humidity: </p>
+                <div class='bigP'>UV Index: 
+                <p class='uvData'></p>
+              </div>
+            </div>
+          </div>
+          <h4>5 Day Forcast</h4>
+        <div class="row row-cols-5 justify-content-between">
+          <div class="col-2 py-3 px-lg-2 border bg-light" id="day1">
+            <p class="day1Date" id="d1da"></p>
+            <p class="day1Cloud"></p>
+            <p class="day1Temp"></p>
+            <p class="day1Wind"></p>
+            <p class="day1Humid"></p>
+          </div>
+          <div class="col-2 py-3 px-lg-2 border bg-light" id="day2">
+            <p class="day2Date"></p>
+            <p class="day2Cloud"></p>
+            <p class="day2Temp"></p>
+            <p class="day2Wind"></p>
+            <p class="day2Humid"></p>
+          </div>
+          <div class="col-2 py-3 px-lg-2 border bg-light" id="day3">
+            <p class="day3Date"></p>
+            <p class="day3Cloud"></p>
+            <p class="day3Temp"></p>
+            <p class="day3Wind"></p>
+            <p class="day3Humid"></p>
+          </div>
+          <div class="col-2 py-3 px-lg-2 border bg-light" id="day4">
+            <p class="day4Date"></p>
+            <p class="day4Cloud"></p>
+            <p class="day4Temp"></p>
+            <p class="day4Wind"></p>
+            <p class="day4Humid"></p>
+          </div>
+          <div class="col-2 py-3 px-lg-2 border bg-light" id="day5">
+            <p class="day5Date"></p>
+            <p class="day5Cloud"></p>
+            <p class="day5Temp"></p>
+            <p class="day5Wind"></p>
+            <p class="day5Humid"></p>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
