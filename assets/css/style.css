@@ -5,6 +5,7 @@ body {
     background-color: rgb(223, 231, 241);
 }
 
+/* styles for header banner */
 .jumbotron {
     display: flex;
     justify-content: center;
@@ -31,23 +32,7 @@ body {
     z-index: 1;
 }
 
-.containerInner {
-margin-left: 350px;
-}
-
-.detRow {
-    background-color: lightgrey;
-    border: 2px solid black;
-    font-weight: bold;
-}
-
-.row {
-    background-color: white;
-    border: 2px solid black;
-    padding: 4px;
-    height: 200px;
-}
-
+/* Styling for side card */
 .container {
     position: absolute;
     background-color: lightgrey;
@@ -71,19 +56,6 @@ h2, h3, h4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-.uvData {
-    display: inline-block;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-}
-
-.col-2 {
-    justify-content: left;
-    text-align: left;
-    font-weight: bold;
-    font-size: 12px;
-}
 
 .historyUl {
     justify-content: center;
@@ -116,4 +88,37 @@ li:active {
 .day1Date, .day2Date, .day3Date, .day4Date, .day5Date {
     font-weight: bolder;
     font-size: 16px;
+}
+
+/* Styling for main card */
+.containerInner {
+margin-left: 350px;
+}
+
+.detRow {
+    background-color: lightgrey;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.uvData {
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Styling for forcast */
+.row {
+    background-color: white;
+    border: 2px solid black;
+    padding: 4px;
+    height: 200px;
+}
+
+.col-2 {
+    justify-content: left;
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
 }

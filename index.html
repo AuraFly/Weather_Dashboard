@@ -16,35 +16,39 @@
   </head>
 
   <body>
-    </div>
+
     <header>
+      <!-- main header banner -->
     <div class="jumbotron">
         <img src="./assets/imgs/suncloud.png" alt="Sun" class="sunCloudImg">
       <h1 class="mheader">Weather Dashboard</h1>
     </header>
 
+    <!-- sidebar that contains the search form -->
     <div class="container">
         <h2>Search:</h2>
         <input class="cityForm form-control-sm" type="text" placeholder="City...">
         <br>
         <button type="button" class="cityBtn btn-secondary btn-sm">Search!</button>
         <ul class="historyUl"> History:
-          
+
         </ul>
     </div>
 
+    <!-- Main City Card -->
     <div class="containerInner">
         <div class="detRow">
             <div class="col-12">
-                <h4 class='cityHeader'>City: </h4>
-                <p class='tempData'>Temp: </p>
-                <p class='windData'>Wind: </p>
-                <p class='humData'>Humidity: </p>
-                <div class='bigP'>UV Index: 
+                <h4 class='cityHeader'>City </h4>
+                <p class='tempData'>Temp </p>
+                <p class='windData'>Wind </p>
+                <p class='humData'>Humidity </p>
+                <div class='bigP'>UV Index 
                 <p class='uvData'></p>
               </div>
             </div>
           </div>
+          <!-- 5 Day Forcast Slides -->
           <h4>5 Day Forcast</h4>
         <div class="row row-cols-5 justify-content-between">
           <div class="col-2 py-3 px-lg-2 border bg-light" id="day1">

@@ -1,5 +1,4 @@
-// my api key ce88f5a80328d0480f9f9290aa8d00ac
-
+// Global Variables
 var cityBtn = document.querySelector('.cityBtn');
 var citForm = document.querySelector('.cityForm');
 var cityName;
@@ -13,6 +12,7 @@ var cityMem = [];
 var his1;
 var num = -1;
 
+// Main api function
 function getApi() {
     var cityName = document.querySelector('.cityForm').value;
     var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + 
@@ -25,10 +25,12 @@ function getApi() {
     })
     .then(function (data) {
 
+//stores city name and lat and long coords for later use
       cityMem.push(cityName);
       localStorage.setItem('lat', data.coord.lat)
       localStorage.setItem('lon', data.coord.lon)
 
+// Populates the main card with api response data
       let city = document.querySelector('.cityHeader');
       let temp = document.querySelector('.tempData');
       let wind = document.querySelector('.windData');
@@ -41,10 +43,10 @@ function getApi() {
       humid.textContent = ' ' + data.main.humidity + '%';
       }
     );
-    
+
+//Second api being setup for uv index and also using lat and long stored earlier
     let latI = localStorage.getItem('lat');
     let lonG = localStorage.getItem('lon');
-
 
     var requestUrl2 = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + 
     latI + 
@@ -58,6 +60,7 @@ function getApi() {
     })
     .then(function (data) {
 
+//populating the uv info and controls the color change if uv is in certain ranges
       let uvP = document.querySelector('.uvData');
       let uvDat = document.querySelector('.uvData');
 
@@ -72,6 +75,8 @@ function getApi() {
       }
       });
 
+
+//setting up next api call for 5 day forcast
       var requestUrl3 = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + 
       latI + 
       '&lon=' + 
@@ -83,7 +88,8 @@ function getApi() {
         return response.json();
       })
       .then(function (data) {
-  
+
+// setting up to populate 5 day forcast cards
         let d1Date = document.querySelector('.day1Date');
         let d1Cloud = document.querySelector('.day1Cloud');
         let d1Temp = document.querySelector('.day1Temp');
@@ -144,6 +150,7 @@ function getApi() {
       d5Wind.textContent = 'Wind: ' + data.list[32].wind.speed + 'MPH';
       d5Hum.textContent = 'Humidity: ' + data.list[32].main.humidity + '';
 
+// creates the list item for every time a city is searched and applies an ID +1 every time the api is ran
 num++;
 
       var historyUl = document.querySelector('.historyUl');
@@ -153,6 +160,10 @@ num++;
       historyUl.appendChild(historyLi);
         });
 }
+
+//creating listeners for items that havent been made yet, I feel I could
+//have dont this better, but ran out of time to complete.
+//will come back to this.
 
 $('body').on('click', '#list0', function () {
   citForm.value = cityMem[0];
@@ -259,5 +270,6 @@ $('body').on('click', '#list19', function () {
   getApi();
 })
 
+//main listener for search button
 cityBtn.addEventListener('click', getApi);
 
